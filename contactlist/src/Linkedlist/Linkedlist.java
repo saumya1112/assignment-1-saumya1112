@@ -73,6 +73,8 @@ public class Linkedlist {
     }
 
     public void removeLast() {
+        last = getPreviousNode(last);
+        last.setNext(null);
 
     }
 
@@ -85,6 +87,22 @@ public class Linkedlist {
             current = current.getNext();
         }
         return null;
+    }
+
+    public void deleteNode(int position) {
+        if (first == null)
+            return;
+        Node temp = first;
+        if (position == 0) {
+            first = temp.getNext();
+            return;
+        }
+        for (int i = 0; temp != null && i < position - 1; i++)
+            temp = temp.getNext();
+        if (temp == null || temp.getNext() == null)
+            return;
+        Node next = temp.getNext().getNext();
+        temp.setNext(next);
     }
 
 }
