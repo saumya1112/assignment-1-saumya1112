@@ -1,5 +1,7 @@
 package task;
 
+import person.Person;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -57,6 +59,20 @@ public class Contactoptions {
             }
         }
 
+
+        System.out.println("Enter your email address:");
+        scanner.nextLine();
+        while (true) {
+            String temp = scanner.nextLine();
+            if (temp.matches("^[a-z]+[0-9]*@[a-z]+\\.[a-z]+$")) {
+                linkedList.addLast(new Person(firstName, lastName, linkedList, temp));
+                break;
+            } else {
+                System.out.println("Invalid email address ! Enter again");
+            }
+        }
     }
+}
+
 
 }
