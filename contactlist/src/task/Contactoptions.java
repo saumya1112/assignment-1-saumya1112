@@ -83,5 +83,24 @@ public class Contactoptions {
             System.out.println("NO results found");
         }
     }
+
+    public void deleteContact(Linkedlist1 linkedList1) {
+        if (!linkedList1.isEmpty()) {
+            System.out.println("Here are all the contacts: Press the number against" +
+                    " to delete the contact.");
+            linkedList1.displayOne();
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            linkedList1.deleteNode(choice);
+            linkedList1.displayOne();
+            System.out.println("Deleted..!!");
+        } else {
+            System.out.println("No Contacts.You must need to add contacts Before you could delete..");
+        }
+    }
+
+
+
+
 }
 
