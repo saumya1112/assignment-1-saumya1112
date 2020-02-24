@@ -45,6 +45,19 @@ public class Linkedlist {
     public boolean exist(String firstName) {
         return false;
     }
+
+    public int indexOf(String firstName) {
+        Node currently = first;
+        int response = 0;
+        while (currently != null) {
+            if (currently.getValue().getFirstName().equals(firstName)) {
+                return response;
+            }
+            response++;
+            currently = currently.getNext();
+        }
+        return -1;
+    }
 }
 
 
