@@ -63,8 +63,20 @@ public class Linkedlist {
     }
 
     public void removeFirst() {
+        if (first == last) {
+            first = null;
+            last = null;
+        } else {
+            Node second = first.getNext();
+            first = second;
+        }
+    }
+
+    public void removeLast() {
+
     }
 }
+
 
 
 
