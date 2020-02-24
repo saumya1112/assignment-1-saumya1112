@@ -71,8 +71,16 @@ public class Contactoptions {
                 System.out.println("Invalid email address ! Enter again");
             }
         }
+        public void viewcontact (LinkedList linkedList){
+            System.out.println("---Here are all your contacts---");
+            if (!linkedList.isEmpty()) {
+                linkedList.display();
+            } else {
+                System.out.println("NO results found");
+            }
+        }
     }
+
 }
 
 
-}
