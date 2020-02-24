@@ -28,5 +28,16 @@ public class Linkedlist {
         return response;
     }
 
+    public void addFirst(Person person) {
+        Node node = new Node(person);
+        if (isEmpty()) {
+            first = node;
+            last = node;
+        } else {
+            node.setNext(first);
+            first = node;
+        }
+    }
+
 
 }
