@@ -1,9 +1,9 @@
-package Linkedlist;
+package contactlinkedlist;
 
 import Node.Node;
 import person.Person;
 
-public class Linkedlist {
+public class Linkedlist1 {
     Person person;
     private Node first;
     private Node last;

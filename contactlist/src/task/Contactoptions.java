@@ -1,5 +1,7 @@
 package task;
 
+
+import contactlinkedlist.Linkedlist1;
 import person.Person;
 
 import java.util.LinkedList;
@@ -9,7 +11,7 @@ public class Contactoptions {
     Scanner scanner = new Scanner(System.in);
     LinkedList<String> linkedList = new LinkedList<>();
 
-    public void addContact(LinkedList linkedList) {
+    public void addContact(Linkedlist1 linkedList1) {
         System.out.println("You have chosen to add a new contact: \n" +
                 "Please enter the name of the Person");
         System.out.println("First Name : ");
@@ -65,13 +67,21 @@ public class Contactoptions {
         while (true) {
             String temp = scanner.nextLine();
             if (temp.matches("^[a-z]+[0-9]*@[a-z]+\\.[a-z]+$")) {
-                linkedList.addLast(new Person(firstName, lastName, linkedList, temp));
+                linkedList1.addLast(new Person(firstName, lastName, linkedList, temp));
                 break;
             } else {
                 System.out.println("Invalid email address ! Enter again");
             }
         }
     }
-}
 
+    public void viewcontact(Linkedlist1 linkedList) {
+        System.out.println("---Here are all your contacts---");
+        if (!linkedList.isEmpty()) {
+            linkedList.display();
+        } else {
+            System.out.println("NO results found");
+        }
+    }
+}
 
