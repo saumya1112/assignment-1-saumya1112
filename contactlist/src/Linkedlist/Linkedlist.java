@@ -37,7 +37,20 @@ public class Linkedlist {
             node.setNext(first);
             first = node;
         }
+
+
     }
 
 
+    public boolean exist(String firstName) {
+        return false;
+    }
 }
+
+
+
+
+
+
+
+
