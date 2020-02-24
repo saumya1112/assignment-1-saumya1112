@@ -130,6 +130,21 @@ public class Linkedlist {
         }
         System.out.println();
     }
+
+    public void displayOne() {
+        var current = first;
+        int count = 0;
+        System.out.println("-----------------------*-------------------------");
+        while (current != null) {
+            System.out.println(count + " Name:" + current.getValue().getFirstName() + " " + current.getValue().getLastName());
+            current = current.getNext();
+            count++;
+        }
+        System.out.println("------------------------*-------------------------");
+        System.out.println();
+    }
+
+
 }
 
 
