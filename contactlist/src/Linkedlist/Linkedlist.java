@@ -105,6 +105,16 @@ public class Linkedlist {
         temp.setNext(next);
     }
 
+    public int size() {
+        var current = first;
+        int index = 1;
+        while (current.getNext() != null) {
+            current = current.getNext();
+            index++;
+        }
+        return index;
+    }
+
 }
 
 
