@@ -9,6 +9,14 @@ public class Linkedlist {
     private Node last;
 
     public void addLast(Person person) {
+        Node node = new Node(person);
+        if (isEmpty()) {
+            first = node;
+            last = node;
+        } else {
+            last.setNext(node);
+            last = node;
+        }
 
     }
 
