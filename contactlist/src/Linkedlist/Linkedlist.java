@@ -61,6 +61,9 @@ public class Linkedlist {
         }
         return -1;
     }
+
+    public void removeFirst() {
+    }
 }
 
 
